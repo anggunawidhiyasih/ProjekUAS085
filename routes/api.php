@@ -20,7 +20,7 @@ Route::get('password',function(){
     return bcrypt('anggun');
 });
 
-Route::get('/wisatas','WisataController@index')->name('wisatas.index')->middleware('auth:api');
+Route::get('/wisatas','WisataController@index')->name('wisatas.index');//->middleware('auth:api');
 Route::get('/wisatas/{wisata}','WisataController@show')->name('wisatas.show')->middleware('auth:api');
 Route::post('/wisatas', 'WisataController@store')->name('wisatas.store');//->middleware('auth:api');
 Route::delete('/wisatas/{wisata}', 'WisataController@destroy')->name('wisatas.destroy');//->middleware('auth:api');

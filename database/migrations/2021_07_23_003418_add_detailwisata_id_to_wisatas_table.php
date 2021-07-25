@@ -14,7 +14,7 @@ class AddDetailwisataIdToWisatasTable extends Migration
     public function up()
     {
         Schema::table('wisatas', function (Blueprint $table) {
-            $table->integer('detailwisata_id');
+            $table->integer('detailwisata_id')->nullable();
         });
         
     }

@@ -22,6 +22,7 @@ class CreateWisatasTable extends Migration
     
         });
     }
+  //  $table->foreign('kota/kabupaten')->references('kota/kabupaten')->on('detailwisata')->onDelete('cascade')->onUpdate('cascade');
 
     /**
      * Reverse the migrations.

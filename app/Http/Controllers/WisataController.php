@@ -44,14 +44,16 @@ class WisataController extends Controller
         $request->validate([
             'nama_wisata'       => 'nullable',
             'lokasi'       => 'nullable',
-            'jenis_wisata' => 'nullable'
+            'jenis_wisata' => 'nullable',
+            'id_detailwisata' => 'nullable'
          ]);
-    
-        $wisata = Wisata::create($request->all());
+         $data = $request->all();
+       
+        $data = Wisata::create($request->all());
     
         return response()->json([
             'message' => 'DATA BERHASIL DISIMPAN',
-            'wisata' => $wisata
+            'wisata' => $data
         ]);
     
     }
