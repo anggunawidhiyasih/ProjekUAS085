@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detailwisata extends Model
 {
-    protected $table = 'detailwisatas';
+    protected $fillable = [
+        'kota/kabupaten',
+        'informasi'
+    ];
+
+    public function wisata()
+    {
+        return $this->belongsTo(Wisata::class, 'detailwisata_id');
+    }
 }

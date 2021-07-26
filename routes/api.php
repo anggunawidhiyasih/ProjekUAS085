@@ -26,6 +26,11 @@ Route::post('/wisatas', 'WisataController@store')->name('wisatas.store');//->mid
 Route::delete('/wisatas/{wisata}', 'WisataController@destroy')->name('wisatas.destroy');//->middleware('auth:api');
 Route::patch('/wisatas/{wisata}', 'WisataController@update')->name('wisatas.update');//->middleware('auth:api');
 
+Route::get('/detailwisatas','DetailwisataController@index')->name('detailwisatas.index')->middleware('auth:api');
+Route::get('/detailwisatas/{wisata}','DetailwisataController@show')->name('detailwisatas.show');//->middleware('auth:api');
+Route::post('/wisadetailwisatastas', 'DetailwisataController@store')->name('detailwisatas.store');//->middleware('auth:api');
+Route::delete('/detailwisatas/{wisata}', 'DetailwisataController@destroy')->name('detailwisatas.destroy');//->middleware('auth:api');
+Route::patch('/detailwisatas/{wisata}', 'DetailwisataController@update')->name('detailwisatas.update');//->middleware('auth:api');
 Route::group([
 
     'middleware' => 'api',
